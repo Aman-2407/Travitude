@@ -1,0 +1,575 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+*{
+	margin: 0;
+	padding: 0;
+
+}
+
+html{
+	font-family: "Roboto Cn", sans-serif;
+  scroll-behavior: smooth;
+  font-size: 10px;
+}
+body
+{
+	margin: 0;
+	padding: 0;
+	overflow-x: hidden;
+	background-color: #ebf5fc;
+}
+
+.back
+    {
+        width: 100%;
+        height: 120vh;
+        background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.7)),
+    url('images/teamback2.jpg') center ,no-repeat;
+    
+	background-size: cover;
+    }
+    .heading {
+  color: #fff;
+  font-size: 60px;
+  position: absolute;
+  top: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: 'Josefin Sans', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  text-align: center;
+}
+
+.heading::after {
+  content: '';
+  width: 5px;
+  height: 60px;
+  background-color: #fff;
+  position: absolute;
+  animation: blinking 1s 3s infinite;
+}
+@keyframes blinking {
+  0% {
+    background-color: #fff;
+  }
+  50% {
+    background-color: transparent;
+  }
+  100% {
+    background-color: #fff;
+  }
+}
+.cards-wrapper {
+   display: flex;
+   justify-content: space-evenly;
+   position: relative;
+   top: 23%;
+   left: 50%;
+   transform: translateX(-50%);
+}
+
+/** Microsoft Edge Browser 15+ - @supports method */
+
+@supports (-ms-ime-align: auto) and (-webkit-text-stroke: initial) {
+   .cards-wrapper {
+      justify-content: space-around; /*! for Edge Browser because it not support space-evenly value*/
+   }
+}
+
+.card {
+   width: 325px;
+   background-color: #ebf5fc;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: space-evenly;
+   transition: transform 0.5s;
+}
+
+/** card visible animation*/
+
+@keyframes cardAnimate {
+   0% {
+      opacity: 0;
+   }
+   100% {
+      opacity: 1;
+   }
+}
+
+.card:nth-child(1) {
+   animation: cardAnimate 2s 3s backwards;
+}
+.card:nth-child(2) {
+   animation: cardAnimate 2s 3.5s backwards;
+}
+.card:nth-child(3) {
+   animation: cardAnimate 2s 4s backwards;
+}
+
+/** Microsoft Edge Browser 15+ - @supports method */
+
+@supports (-ms-ime-align: auto) and (-webkit-text-stroke: initial) {
+   .card {
+      justify-content: space-around; /*! for Edge Browser because it not support space-evenly value*/
+   }
+}
+
+.card:hover {
+   transform: scale(1.15);
+}
+
+.image-top {
+   width: 100%;
+   height: 180px;
+   object-fit: cover;
+   -webkit-clip-path: polygon(0 0, 100% 0, 100% 74%, 0 100%);
+   -moz-clip-path: polygon(0 0, 100% 0, 100% 74%, 0 100%);
+   clip-path: polygon(0 0, 100% 0, 100% 74%, 0 100%);
+}
+
+.profile-image {
+   width: 120px;
+   height: 120px;
+   object-fit: cover;
+   border-radius: 50%;
+   margin-top: -110px;
+   z-index: 10;
+   border: 5px solid #eeeeee;
+}
+
+/** Microsoft Edge Browser 15+ - @supports method */
+
+@supports (-ms-ime-align: auto) and (-webkit-text-stroke: initial) {
+   .profile-image {
+      margin-top: -70px;
+   }
+}
+
+.card h1.full-name {
+   font-family: "Ubuntu", sans-serif;
+   font-size: 22px;
+   color: #555555;
+   margin: 10px;
+}
+
+.card .job {
+   color: #777;
+   font-family: "Montserrat", sans-serif;
+   font-weight: 300;
+   font-size: 18px;
+}
+
+.card .about-me {
+   font-family: "Josefin Sans", sans-serif;
+   font-size: 15px;
+   line-height: 1.3;
+   padding: 8px 14px;
+   text-align: center;
+   color: #444;
+   font-style: italic;
+}
+
+.card .but {
+   width: 120px;
+   padding: 7px;
+   margin: 10px 0;
+   background-color: #ff304f;
+   border: none;
+   outline: none;
+   border-radius: 25px;
+   font-family: "Josefin Sans", sans-serif;
+   font-size: 15px;
+   color: #eeeeee;
+   box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.4);
+   cursor: pointer;
+}
+
+.card:hover .but {
+   animation: buttonRotation 2s linear 0.8s;
+}
+/* *Button Animation*/
+
+@keyframes buttonRotation {
+   0% {
+      transform: scale(1) rotateZ(0);
+   }
+   5% {
+      transform: scale(1.2) rotateZ(5deg);
+   }
+   10% {
+      transform: scale(1.2) rotateZ(-5deg);
+   }
+   15% {
+      transform: scale(1.2) rotateZ(5deg);
+   }
+   20% {
+      transform: scale(1.2) rotateZ(-5deg);
+   }
+   25% {
+      transform: scale(1.2) rotateZ(5deg);
+   }
+   30% {
+      transform: scale(1.2) rotateZ(-5deg);
+   }
+   35% {
+      transform: scale(1.2) rotateZ(5deg);
+   }
+   40% {
+      transform: scale(1.2) rotateZ(-5deg);
+   }
+   45% {
+      transform: scale(1.2) rotateZ(5deg);
+   }
+   50% {
+      transform: scale(1.2) rotateZ(-5deg);
+   }
+   55% {
+      transform: scale(1.2) rotateZ(5deg);
+   }
+   60% {
+      transform: scale(1.2) rotateZ(-5deg);
+   }
+   65% {
+      transform: scale(1.2) rotateZ(5deg);
+   }
+   70% {
+      transform: scale(1.2) rotateZ(-5deg);
+   }
+   75% {
+      transform: scale(1.2) rotateZ(5deg);
+   }
+   80% {
+      transform: scale(1.2) rotateZ(-5deg);
+   }
+   85% {
+      transform: scale(1.2) rotateZ(5deg);
+   }
+   90% {
+      transform: scale(1.2) rotateZ(-5deg);
+   }
+   85% {
+      transform: scale(1.2) rotateZ(5deg);
+   }
+   100% {
+      transform: scale(1) rotateZ(0);
+   }
+}
+
+ul.social-icons {
+   width: 150px;
+   list-style: none;
+   display: flex;
+   justify-content: space-evenly;
+   margin: 10px 0 20px 0;
+   border-top: 1px solid #999;
+   padding-top: 18px;
+}
+
+@supports (-ms-ime-align: auto) and (-webkit-text-stroke: initial) {
+   ul.social-icons {
+      justify-content: space-around; /*! for Edge Browser because it not support space-evenly value*/
+   }
+}
+
+ul.social-icons i {
+   font-size: 18px;
+   padding: 3px 6px;
+}
+
+.fa-facebook-f {
+   color: #3c5a99;
+}
+
+.insta
+{
+  color: rgb(248, 54, 6);
+}
+
+.fa-envelope
+{
+  color: black;
+}
+
+ /*Footer*/
+ 
+ .foot {
+  margin: 0px;
+  padding: 0px;
+  
+}
+.footer-section {
+background: #151414;
+
+
+
+}
+.footer-cta {
+border-bottom: 1px solid #373636;
+}
+.footer-content {
+position: relative;
+z-index: 2;
+}
+.footer-logo {
+margin-bottom: 30px;
+}
+.footer-logo .logo {
+  font-size: 45px;
+  color:white;
+  font-weight: 700;
+  text-decoration: none !important;
+}
+.footer-text p
+{
+  color: #878787;
+  font-size: 18px;
+}
+.mb-25 .single-cta .location{
+  color: #ff304f;
+margin-bottom: 14px;
+font-size: 30px;
+line-height: 28px;
+}
+.mail
+{
+color: #ff304f;
+margin-bottom: 14px;
+font-size: 30px;
+line-height: 28px;
+}
+.footer-social-icon .fllow {
+color: #fff;
+display: block;
+font-size: 20px;
+font-weight: 700;
+font-family: 'Poppins', sans-serif;
+margin-bottom: 20px;
+}
+.footer-social-icon .link {
+color: #fff;
+font-size: 16px;
+margin-right: 15px;
+}
+.footer-social-icon .icons {
+height: 40px;
+width: 40px;
+text-align: center;
+line-height: 38px;
+border-radius: 23%;
+border: .5px solid #fff;
+outline: none;
+}
+.facebook-bg:hover{
+background: #3B5998;
+transition: 0.5s ease;
+border: none;
+}
+.twitter-bg:hover{
+background: #55ACEE;
+transition: 0.5s ease;
+border: none;
+}
+.insta-bg:hover{
+background: rgba(223, 4, 40, 0.973);
+transition: 0.5s ease;
+border: none;
+}
+.footer-widget-heading .head {
+color: #fff;
+font-size: 20px;
+font-weight: 600;
+margin-bottom: 40px;
+position: relative;
+}
+.footer-widget-heading .head::before {
+content: "";
+position: absolute;
+left: 0;
+bottom: -15px;
+height: 2px;
+width: 75px;
+background: #ff304f;
+}
+.footer-widget .foot .inn {
+display: inline-block;
+float: left;
+width: 50%;
+margin-bottom: 25px;
+font-size: 17px;
+}
+.footer-widget .foot .inn .tx:hover{
+color: #ff304f;
+}
+.footer-widget .foot .inn .tx {
+color: #878787;
+text-transform: capitalize;
+}
+.subscribe-form {
+position: relative;
+overflow: hidden;
+
+}
+.subscribe-form .input {
+width: 100%;
+padding: 15px;
+background: #2E2E2E;
+border: 1px solid #2E2E2E;
+color: #fff;
+font-size: 13px;
+font-family: 'Poppins', sans-serif;
+
+}
+.subscribe-form .send {
+  position: absolute;
+  right: 0px;
+  background: #ff304f;
+  padding: 11px 15px;
+  border: 1px solid #ff304f;
+  top: 73px;
+}
+::placeholder {
+color: #878787;
+opacity: 1; 
+}
+
+.subscribe-form .send .tele {
+color: #fff;
+font-size: 25px;
+transform: rotate(-6deg);
+}
+.subscribe-form .send .tele:hover
+{
+color: black;
+transition: 0.3s ease-in-out;
+}
+.copyright-area{
+
+background: #202020;
+padding: 23px 0;
+}
+.copyright-text p {
+text-align: center;
+margin: 0;
+font-size: 15px;
+color: #878787;
+}
+.copyright-text p a{
+color: #ff304f;
+}
+  /*BUTTON*/
+
+  .wrap
+  {
+	  text-align: center;
+	margin-top: 250px;
+  }
+	.b1 {
+    position: absolute;
+		transform: translate(-50%, -50%);
+		text-decoration: none !important;
+		text-transform: uppercase;
+		background: #262626;
+		width: 150px;
+		height: 50px;
+		line-height: 50px;
+		color: #FFF;
+		padding: 0px 5px;
+		letter-spacing: 2px;
+		text-align: center;
+		font-size: 15px;
+		font-weight: bold;
+		transition: 0.5;
+		overflow: hidden;
+		border-radius: 25px;
+	}
+  .b1:before {
+		content: '';
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 0;
+		height: 0;
+		/*    background: #F00;*/
+		z-index: -1;
+		transition: 1s;
+		border-style: solid;
+		border-color: #ff304f;
+		border-width: 80px 100px;
+		transform: rotate(360deg);
+		transform-origin: top left
+	}
+	.b1:hover:before {
+		border-color: #00F;
+		transform: rotate(44deg)
+	}
+	
+	.b1:hover {
+		color: #ff0;
+		transition: 0.5s;
+		transition-delay: 0.3s;
+	}
+	
+    
+
+/** Media */
+
+@media (max-width: 992px) {
+  .back {
+    height: 100%;
+ }
+  .heading {
+     width: 90%;
+  }
+  .cards-wrapper {
+     flex-wrap: wrap;
+     padding: 300px 0 150px 0;
+  }
+  .card {
+     margin: 0 30px 50px;
+  }
+  .wrap
+  {
+    margin-top: 0px;
+  }
+  .b1
+  {
+     width: 120px;
+     height: 35px;
+     font-size: 10px;
+     line-height: 30px;
+    margin-top: -35px;
+  }
+}
+
+@media (max-width: 767px) {
+  .heading {
+     font-size: 50px;
+  }
+  .heading::after {
+     height: 40px;
+  }
+  .cards-wrapper {
+     padding: 250px 0 100px 0;
+  }
+.b1
+{
+
+}
+
+}
+
+@media (max-width: 398px) {
+  .heading {
+     font-size: 38px;
+  }
+  .heading::after {
+     height: 28px;
+  }
+  .cards-wrapper {
+     padding: 190px 0 70px 0;
+  }
+}

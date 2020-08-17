@@ -1,0 +1,502 @@
+* {
+	box-sizing: border-box;
+}
+*{
+	margin: 0;
+	padding: 0;
+
+}
+html
+{
+	font-size: 10px;
+	font-family: "Roboto Cn", sans-serif;
+	scroll-behavior: smooth;
+}
+body
+{
+	margin: 0;
+	padding: 0;
+	overflow-x: hidden;
+	background-color: #ebf5fc;
+  
+}
+/*NAVBAR*/
+.logo1
+{
+visibility: hidden;
+
+}
+
+.c
+{
+	max-width: 140%;
+    width: 100%;
+	background-color:  #3f3b3b;
+	margin: 0 auto;
+    
+}
+
+.bar{
+	text-decoration: none !important;
+	color:#fff;
+	font-weight: bold;
+}
+.bar:hover
+{
+	color: #fff;
+}
+header{
+
+  overflow: hidden;
+  
+}
+
+
+.menu-toggle{
+	position: fixed;
+	top: 2.5rem;
+	right: 2.5rem;
+	color: red;
+	font-size: 3rem;
+	cursor: pointer;
+	z-index: 1000;
+	display: none;
+}
+
+nav{
+	padding-top: 2rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	text-transform: uppercase;
+	font-size: 1.6rem;
+}
+.brand{
+	font-size: 4rem;
+	font-weight: 300;
+	transform: translateX(-100rem);
+	animation: slideIn .5s forwards;
+}
+
+.brand #s1{
+	color: #ff304f;
+}
+
+nav ul{
+	display: flex;
+  font-size: 1.9rem;
+  
+}
+nav ul li{
+	list-style: none;
+	transform: translateX(100rem);
+	animation: slideIn .5s forwards;
+}
+nav ul li:nth-child(1){
+	animation-delay: 0s;
+}
+
+nav ul li:nth-child(2){
+	animation-delay: .5s;
+}
+
+nav ul li:nth-child(3){
+	animation-delay: 1s;
+}
+
+nav ul li:nth-child(4){
+	animation-delay: 1.5s;
+}
+nav ul li:nth-child(5){
+	animation-delay: 2s;
+}
+
+nav ul li a{
+	padding: 1rem 0;
+	margin: 0 3rem;
+	position: relative;
+	letter-spacing: 2px;
+}
+
+nav ul li a:last-child{
+	margin-right: 0;
+}
+
+nav ul li a::before,
+nav ul li a::after{
+	content: '';
+	position: absolute;
+	width: 100%;
+	height: 2px;
+	background-color: #ff304f;
+	left: 0;
+	transform: scaleX(0);
+	transition: all .5s;
+}
+
+nav ul li a::before{
+	top: 0;
+	transform-origin: left;
+}
+nav ul li a::after{
+	bottom: 0;
+	transform-origin: right;
+}
+
+.overlay{
+	display: inline-block;
+	background-color:black;
+	position: fixed;
+	width: 100%;
+	
+	right: 0;
+	left: 0;
+	top: 0;
+	bottom: 0;
+	transition: opacity 650ms;
+	transform: scale(0);
+	opacity: 0;
+   overflow: hidden;
+}
+nav ul li a:hover::before,
+nav ul li a:hover::after{
+	transform: scaleX(1);
+}
+@keyframes slideIn {
+	from{
+
+	}
+	to{
+		transform: translateX(0);
+	}
+}
+/*Booking page starts here*/
+
+.booking-form-box {
+  width: 400px;
+  height: 620px;
+  position: relative;
+  margin: 5px auto;
+
+  background-color: white;
+  padding: 10px;
+  overflow: hidden;
+  border-radius: 10px;
+  display: flex;
+  box-shadow: -5px -5px 10px rgba(225, 225, 255, 0.05),
+    5px 5px 15px rgba(0, 0, 0, 0.5);
+}
+.radio-btn {
+  margin: 0 25px;
+}
+.radio-btn .btnn {
+  margin: 15px 15px 20px auto;
+  box-shadow: none;
+}
+.radio-btn .btnn::after {
+  content: '';
+  height: 15px;
+  width: 15px;
+  background-color: #fff;
+  position: relative;
+  display: inline-block;
+  border: 4px solid #ebf5fc;
+  visibility: visible;
+  border-radius: 100%;
+}
+.radio-btn .btnn:checked::after {
+  content: '';
+  background-color: #000;
+  transition: 0.5s;
+}
+.radio-btn .rad {
+  color: black;
+  padding: 7px;
+  margin-right: 7px;
+  font-size: 15px;
+  font-weight: 700;
+}
+.booking-form {
+  margin-top: 40px;
+  margin-left: -300px;
+  padding: 5px;
+}
+.booking-form label {
+  margin-bottom: -6px;
+  margin-top: 17px;
+  
+  font-size: 18px;
+  font-weight: 500;
+  color: black;
+}
+.form-control {
+  font-size: 12px;
+  font-weight: 700;
+  text-align: left;
+  width: 275px;
+  padding: 0;
+  margin: 10px 0;
+  border-left: 0;
+  border-top: 0;
+  border-right: 0;
+  border-bottom: 1.3px solid #0e153a;
+  outline: none;
+  background: transparent;
+}
+.Booking-btn {
+  font-size: 13px;
+  text-decoration: none;
+  font-weight: bold;
+  width: 85%;
+  padding: 10px 30px;
+  cursor: pointer;
+  display: block;
+  margin: 0;
+  background: linear-gradient(to right, #146eb4, #22d1ee);
+  border: 5px;
+  box-shadow: 7px 6px 28px 1px rgba(0, 0, 0, 0.24);
+  outline: none;
+  border-radius: 30px;
+}
+.Booking-btn:active {
+  transform: scale(0.98);
+  /* Scaling button to 0.98 to its original size */
+  box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
+}
+/*Booking page Ends here*/
+
+
+/*Footer*/
+.foot {
+  margin: 0px;
+  padding: 0px;
+}
+.footer-section {
+background: #151414;
+position: absolute;
+width: 100%;
+z-index: -1;
+}
+.footer-cta {
+border-bottom: 1px solid #373636;
+}
+
+
+.footer-content {
+position: relative;
+z-index: 2;
+}
+
+.footer-logo {
+margin-bottom: 30px;
+}
+.footer-logo .logo {
+  font-size: 45px;
+  color:white;
+  font-weight: 700;
+  text-decoration: none !important;
+}
+.footer-text p
+{
+  color: #878787;
+  font-size: 18px;
+}
+.mb-25 .single-cta .location{
+  color: #ff304f;
+margin-bottom: 14px;
+font-size: 30px;
+line-height: 28px;
+}
+.mail
+{
+color: #ff304f;
+margin-bottom: 14px;
+font-size: 30px;
+line-height: 28px;
+}
+.footer-social-icon .fllow {
+color: #fff;
+display: block;
+font-size: 20px;
+font-weight: 700;
+font-family: 'Poppins', sans-serif;
+margin-bottom: 20px;
+}
+.footer-social-icon .link {
+color: #fff;
+font-size: 16px;
+margin-right: 15px;
+}
+.footer-social-icon .icons {
+height: 40px;
+width: 40px;
+text-align: center;
+line-height: 38px;
+border-radius: 23%;
+border: .5px solid #fff;
+outline: none;
+}
+.facebook-bg:hover{
+background: #3B5998;
+transition: 0.5s ease;
+border: none;
+}
+.twitter-bg:hover{
+background: #55ACEE;
+transition: 0.5s ease;
+border: none;
+}
+.insta-bg:hover{
+background: rgba(223, 4, 40, 0.973);
+transition: 0.5s ease;
+border: none;
+}
+.footer-widget-heading .head {
+color: #fff;
+font-size: 20px;
+font-weight: 600;
+margin-bottom: 40px;
+position: relative;
+}
+.footer-widget-heading .head::before {
+content: "";
+position: absolute;
+left: 0;
+bottom: -15px;
+height: 2px;
+width: 75px;
+background: #ff304f;
+}
+.footer-widget .foot .inn {
+display: inline-block;
+float: left;
+width: 50%;
+margin-bottom: 25px;
+font-size: 17px;
+}
+.footer-widget .foot .inn .tx:hover{
+color: #ff304f;
+}
+.footer-widget .foot .inn .tx {
+color: #878787;
+text-transform: capitalize;
+}
+.subscribe-form {
+position: relative;
+overflow: hidden;
+
+}
+.subscribe-form .input {
+width: 100%;
+padding: 15px;
+background: #2E2E2E;
+border: 1px solid #2E2E2E;
+color: #fff;
+font-size: 13px;
+font-family: 'Poppins', sans-serif;
+
+}
+.subscribe-form .send {
+  position: absolute;
+  right: 0px;
+  background: #ff304f;
+  padding: 11px 15px;
+  border: 1px solid #ff304f;
+  top: 73px;
+}
+::placeholder {
+color: #878787;
+opacity: 1; 
+}
+
+.subscribe-form .send .tele {
+color: #fff;
+font-size: 25px;
+transform: rotate(-6deg);
+}
+.subscribe-form .send .tele:hover
+{
+color: black;
+transition: 0.3s ease-in-out;
+}
+.copyright-area{
+
+background: #202020;
+padding: 23px 0;
+}
+.copyright-text p {
+text-align: center;
+margin: 0;
+font-size: 15px;
+color: #878787;
+}
+.copyright-text p a{
+color: #ff304f;
+}
+
+/* Responsive*/
+
+
+@media screen and (max-width: 1000px){
+  /*BACKGROUND*/
+  body
+  {
+    overflow-x: hidden;
+  }
+  .logo1
+{
+visibility: visible;
+margin-left: 70px;
+width: 60%;
+border-radius: 5px;
+background-color: #878787;
+
+}
+  
+    /*TOGGLE*/
+    
+    .menu-toggle{
+      display: block;
+      margin-top: -20px;
+    
+    }
+  
+    nav{
+    
+      padding-top: 0;
+      display: none;
+      flex-direction: column;
+      justify-content: space-evenly;
+      align-items: center;
+      height: 100vh;
+      text-align: center;
+    
+    }
+  
+    nav ul{
+      flex-direction: column;
+    }
+  
+    nav ul li{
+      margin-top: 6rem;
+    }
+  
+    nav ul li a{
+      margin: 0;
+      font-size: 2rem;
+    }
+  
+    .brand{
+      font-size: 4rem;
+    }
+    
+    .overlay.menu-open,
+    nav.menu-open{
+      display: flex;
+      width: 100%;
+      height: 100%;
+      transform: scale(1);
+      opacity: 1;
+
+                  }
+}

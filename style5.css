@@ -1,0 +1,732 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+*{
+	margin: 0;
+	padding: 0;
+
+}
+
+html{
+	
+	font-family: "Roboto Cn", sans-serif;
+	scroll-behavior: smooth;
+	font-size: 10px;
+}
+body
+{
+	margin: 0;
+	padding: 0;
+	overflow-x: hidden;
+	background-color: #ebf5fc;
+  
+}
+.logo1
+{
+ visibility: hidden;
+margin-top: -490px;
+ 
+}
+.imgbx
+{
+  
+	width: 100%;
+	height: 500px;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	
+}
+/*NAVBAR*/
+.c
+{
+	max-width: 140%;
+    width: 100%;
+	background-color:  #3f3b3b;
+	margin: 0 auto;
+    
+}
+
+.bar{
+	text-decoration: none !important;
+	color:#fff;
+	font-weight: bold;
+}
+.bar:hover
+{
+	color: #fff;
+}
+header{
+
+  overflow: hidden;
+  
+}
+
+
+.menu-toggle{
+	position: fixed;
+	top: 2.5rem;
+	right: 2.5rem;
+	color: red;
+	font-size: 3rem;
+	cursor: pointer;
+	z-index: 1000;
+	display: none;
+}
+
+nav{
+	padding-top: 2rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	text-transform: uppercase;
+	font-size: 1.6rem;
+}
+.brand{
+	font-size: 4rem;
+	font-weight: 300;
+	transform: translateX(-100rem);
+	animation: slideIn .5s forwards;
+}
+
+.brand #s1{
+	color: #ff304f;
+}
+
+nav ul{
+	display: flex;
+  font-size: 1.9rem;
+  
+}
+nav ul li{
+	list-style: none;
+	transform: translateX(100rem);
+	animation: slideIn .5s forwards;
+}
+nav ul li:nth-child(1){
+	animation-delay: 0s;
+}
+
+nav ul li:nth-child(2){
+	animation-delay: .5s;
+}
+
+nav ul li:nth-child(3){
+	animation-delay: 1s;
+}
+
+nav ul li:nth-child(4){
+	animation-delay: 1.5s;
+}
+nav ul li:nth-child(5){
+	animation-delay: 2s;
+}
+
+nav ul li a{
+	padding: 1rem 0;
+	margin: 0 3rem;
+	position: relative;
+	letter-spacing: 2px;
+}
+
+nav ul li a:last-child{
+	margin-right: 0;
+}
+
+nav ul li a::before,
+nav ul li a::after{
+	content: '';
+	position: absolute;
+	width: 100%;
+	height: 2px;
+	background-color: #ff304f;
+	left: 0;
+	transform: scaleX(0);
+	transition: all .5s;
+}
+
+nav ul li a::before{
+	top: 0;
+	transform-origin: left;
+}
+nav ul li a::after{
+	bottom: 0;
+	transform-origin: right;
+}
+
+.overlay{
+	display: inline-block;
+	background-color:black;
+	position: fixed;
+	width: 100%;
+	
+	right: 0;
+	left: 0;
+	top: 0;
+	bottom: 0;
+	transition: opacity 650ms;
+	transform: scale(0);
+	opacity: 0;
+   overflow: hidden;
+}
+nav ul li a:hover::before,
+nav ul li a:hover::after{
+	transform: scaleX(1);
+}
+@keyframes slideIn {
+	from{
+
+	}
+	to{
+		transform: translateX(0);
+	}
+}
+
+.text-inf
+{
+	margin-top: -385px;
+	text-align: center;
+	font-size: 33px;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 500;
+	color: whitesmoke;
+	
+}
+/*Form*/
+.bdy
+    {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+		min-height: 92vh;
+		margin-left: 100px;
+		
+        
+    }
+    .c1
+    {
+		top:-2%;
+        position: absolute;
+        width: 100%;
+        max-width: 500px;
+        margin: 15px;
+        height: 550px;
+        background:none;
+        display: flex;
+        justify-content: space-between;
+		align-items: center;
+		border-radius: 15px;
+        box-sizing: border-box;
+     
+    }
+    .c1 .formbx
+    {
+       width: 100%;
+       display: flex;
+       justify-content: center;
+       align-items: center;
+    }
+    .c1 .formbx form
+    {
+       position: relative;
+       width: 100%;
+       padding: 0 0 0 50px;
+    }
+    .c1 .formbx form .heading
+    {
+       color: darkslategray;
+	   font-weight: bold;
+	   font-family: 'Montserrat', sans-serif;
+       font-size: 35px;
+       text-transform: uppercase;
+       letter-spacing: 2px;
+       margin-bottom: 50px;
+    }
+    .c1 .formbx form .inputbox
+    {
+       position: relative;
+       margin-bottom: 40px;
+    }
+    .c1 .formbx form .inputbox:last-child
+    {
+       margin-bottom: 0px;
+    }
+    .c1 .formbx form .inputbox input,
+    .c1 .formbx form .inputbox textarea
+    {
+       position: relative;
+       background: transparent;
+       outline: none;
+       border: none;
+       width: 100%;
+       color: black;
+       padding-bottom: 10px;
+       font-size: 16px;
+       letter-spacing: 1px;
+       font-weight: 300;
+       border-bottom: 2px solid #999999;
+       resize: none;
+    }
+    .c1 .formbx form .inputbox textarea
+    {
+       height: 100px;
+    }
+    .c1 .formbx form .inputbox input[type="submit"]
+    {
+       background: white;
+       padding: 8px 13px;
+       margin-top: -10px;
+       width: 100px;
+       cursor: pointer;
+       background: #ff304f;
+	   color: white;
+	   font-family: 'Montserrat', sans-serif;
+       font-size: 17px;
+       font-weight: 400;
+       border: none;
+       border-radius: 10px;
+       text-transform: uppercase;
+       letter-spacing: 1.5px;
+    }
+    .c1 .formbx form .inputbox input[type="submit"]:focus
+    {
+       background: #1bfaad;
+       color: #111;
+    }
+    .c1 .formbx form .inputbox  .spn
+    {
+       position: absolute;
+	   left: 0;
+	   font-family: 'Montserrat', sans-serif;
+       font-size: 16px;
+       font-weight: 500;
+       display: inline-block;
+       pointer-events: none;
+       letter-spacing: 1px;
+       color: #999;
+       transition: all 0.3s;
+    }
+    .c1 .formbx form .inputbox input:focus ~ .spn,
+    .c1 .formbx form .inputbox textarea:focus ~ .spn,
+    .c1 .formbx form .inputbox input:valid ~ .spn,
+    .c1 .formbx form .inputbox textarea:valid ~.spn
+    {
+       transform: translateY(-26px);
+	   color: #ff304f;
+	   font-weight: 700;
+       font-size: 14px;
+    }
+    .c1 .formbx form .inputbox input:focus ,
+    .c1 .formbx form .inputbox textarea:focus, 
+    .c1 .formbx form .inputbox input:valid, 
+    .c1 .formbx form .inputbox textarea:valid 
+    {
+      border-bottom: 2px solid #ff304f;
+    }
+    @media(max-width: 993px)
+    {
+       .c1 .formbx .address
+       {
+          width: 100%;
+          padding: 0 50px; 
+       }
+       .c1 .formbx form .address
+       {
+          position: relative;
+          width: 100%;
+          max-width: 500px;
+          padding: 0;
+       }
+	}
+.address 
+{
+	margin-top: 25px;
+}
+.address .addtext1
+{
+	color: darkslategrey;
+	font-weight: 600;
+	
+	font-size: 35px;
+	text-transform: uppercase;
+}
+.mail1
+{
+font-size: 45px;
+margin-left: 175px;
+
+}
+.mail1:hover
+{
+	color: #ff304f;
+	transition: 0.4s;
+}
+.addtext2
+{
+	margin-left: 75px;
+	font-size: 20px;
+	letter-spacing: 2px;
+}
+/*Text*/
+.line
+{
+	margin-top: -75px;
+	border-top: 2px solid #ff304f
+}
+.cont-1
+{
+position: relative;
+	text-align: center;
+	letter-spacing: 1.5px;
+	font-size: 25px;
+	font-weight: 500;
+	color:darkslategrey;
+	z-index: -1;
+}
+/*Accordian*/
+.accordion {
+	width: 100%;
+	max-width: 1600px;
+	margin: 2rem auto;
+	
+  }
+  .accordion-item {
+	background-color: #ebf5fc;
+	color:black;
+	margin: 1rem 0;
+	border-radius: 0.5rem;
+	box-shadow: 0 2px 5px 0 rgba(61, 34, 34, 0.25);
+  }
+  .accordion-item-header {
+	padding:2.5rem 2.5rem 2.5rem 2.5rem;
+	min-height: 3.5rem;
+	line-height: 2rem;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 20px;
+	font-weight: bold;
+	display: flex;
+	align-items: center;
+	position: relative;
+	cursor: pointer;
+  }
+  .accordion-item-header::after {
+	content: "\002B";
+	font-size: 3rem;
+	position: absolute;
+	right: 1rem;
+  }
+  .accordion-item-header.active::after {
+	content: "\2212";
+  }
+  .accordion-item-body {
+	  
+	max-height: 0;
+	overflow: auto;
+	transition: max-height 0.2s ease-out;
+  }
+  .accordion-item-body-content {
+	padding: 3rem;
+	font-family: 'Montserrat', sans-serif;
+	
+	line-height: 1.5rem;
+	border-top: 1px solid;
+	border-image: linear-gradient(to right, transparent, #34495e, transparent) 1;
+  }
+  .tag
+  {
+	  padding: 3px;
+	  font-size: 22px;
+	  color: #3B5998;
+	  font-weight: 550px;
+  }
+  .tag1
+  {
+	  color: darkslategray;
+	  font-size: 20px;
+	  padding: 4px;
+	  font-weight: bold;
+	  letter-spacing: 2px;
+  }
+  .tag2
+  {   
+	  padding: 4px;
+	  font-size: 15px;
+	  letter-spacing: 1px;
+	  
+	  
+  }
+ 
+  /*Footer*/
+  /*Footer*/
+ 
+  .foot {
+	margin: 0px;
+	padding: 0px;
+	
+  }
+  .footer-section {
+    
+      background: #151414;
+      position: absolute;
+      width: 100%;
+      z-index: -1;
+    }
+  
+  
+  .footer-cta {
+  border-bottom: 1px solid #373636;
+  }
+  .footer-content {
+  position: relative;
+  z-index: 2;
+  }
+  .footer-logo {
+  margin-bottom: 30px;
+  }
+  .footer-logo .logo {
+	font-size: 45px;
+	color:white;
+	font-weight: 700;
+	text-decoration: none !important;
+  }
+  .footer-text .logo-text
+  {
+	color: #878787;
+	font-size: 18px;
+  }
+  .mb-25 .single-cta .location{
+	color: #ff304f;
+  margin-bottom: 14px;
+  font-size: 30px;
+  line-height: 28px;
+  }
+  .mail
+  {
+  color: #ff304f;
+  margin-bottom: 14px;
+  font-size: 30px;
+  line-height: 28px;
+  }
+  .footer-social-icon .fllow {
+  color: #fff;
+  display: block;
+  font-size: 20px;
+  font-weight: 700;
+  font-family: 'Poppins', sans-serif;
+  margin-bottom: 20px;
+  }
+  .footer-social-icon .link {
+  color: #fff;
+  font-size: 16px;
+  margin-right: 15px;
+  }
+  .footer-social-icon .icons {
+  height: 40px;
+  width: 40px;
+  text-align: center;
+  line-height: 38px;
+  border-radius: 23%;
+  border: .5px solid #fff;
+  outline: none;
+  }
+  .facebook-bg:hover{
+  background: #3B5998;
+  transition: 0.5s ease;
+  border: none;
+  }
+  .twitter-bg:hover{
+  background: #55ACEE;
+  transition: 0.5s ease;
+  border: none;
+  }
+  .insta-bg:hover{
+  background: rgba(223, 4, 40, 0.973);
+  transition: 0.5s ease;
+  border: none;
+  }
+  .footer-widget-heading .head {
+  color: #fff;
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 40px;
+  position: relative;
+  }
+  .footer-widget-heading .head::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -15px;
+  height: 2px;
+  width: 75px;
+  background: #ff304f;
+  }
+  .footer-widget .foot .inn {
+  display: inline-block;
+  float: left;
+  width: 50%;
+  margin-bottom: 25px;
+  font-size: 17px;
+  }
+  .footer-widget .foot .inn .tx:hover{
+  color: #ff304f;
+  }
+  .footer-widget .foot .inn .tx {
+  color: #878787;
+  text-transform: capitalize;
+  }
+  .subscribe-form {
+  position: relative;
+  overflow: hidden;
+  
+  }
+  .subscribe-form .input {
+  width: 100%;
+  padding: 15px;
+  background: #2E2E2E;
+  border: 1px solid #2E2E2E;
+  color: #fff;
+  font-size: 13px;
+  font-family: 'Poppins', sans-serif;
+  
+  }
+  .subscribe-form .send {
+	position: absolute;
+	right: 0px;
+	background: #ff304f;
+	padding: 11px 15px;
+	border: 1px solid #ff304f;
+	top: 73px;
+  }
+  ::placeholder {
+  color: #878787;
+  opacity: 1; 
+  }
+  
+  .subscribe-form .send .tele {
+  color: #fff;
+  font-size: 25px;
+  transform: rotate(-6deg);
+  }
+  .subscribe-form .send .tele:hover
+  {
+  color: black;
+  transition: 0.3s ease-in-out;
+  }
+  .copyright-area{
+  
+  background: #202020;
+  padding: 23px 0;
+  }
+  .copyright-text p {
+  text-align: center;
+  margin: 0;
+  font-size: 15px;
+  color: #878787;
+  }
+  .copyright-text p a{
+  color: #ff304f;
+  }
+   
+
+
+
+
+
+
+
+
+
+
+					@media screen and (max-width: 1200px){
+						/*BACKGROUND*/
+						body
+		{
+			overflow-x: hidden;
+		}
+   
+							/*TOGGLE*/
+							
+							.menu-toggle{
+                margin-top: -20px;
+								display: block;
+							
+							}
+						
+							nav{
+							
+								padding-top: 0;
+								display: none;
+								flex-direction: column;
+								justify-content: space-evenly;
+								align-items: center;
+								height: 100vh;
+								text-align: center;
+							
+							}
+						
+							nav ul{
+								flex-direction: column;
+							}
+						
+							nav ul li{
+								margin-top: 6rem;
+							}
+						
+							nav ul li a{
+								margin: 0;
+								font-size: 2rem;
+							}
+						
+							.brand{
+								font-size: 4rem;
+							}
+						  
+						  .overlay.menu-open,
+						  nav.menu-open{
+							  display: flex;
+							  width: 100%;
+							  height: 100%;
+							  transform: scale(1);
+							  opacity: 1;
+              }
+              .imgs
+              {
+                position: relative;
+                z-index: -1;
+              }
+              .text-inf
+              {
+              margin-top: -350px;
+                position: absolute;
+                z-index: -1;
+                font-size: 22px;
+              }
+.r2
+{
+  
+  z-index: 1;
+}
+.bdy
+{
+  margin-right: 185px;
+}
+
+.addtext1
+{
+  margin-left: 60px;
+}
+            }
+            
+
+@media screen and (max-width: 1199px){
+
+  .logo1
+  {
+    visibility: visible;
+    margin-left: 65px;
+  }
+  .hide
+  {
+    position: relative;
+    z-index: 0;
+  }
+}
